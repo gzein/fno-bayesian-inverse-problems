@@ -62,15 +62,15 @@ class InverseBayesDarcySolver1D:
         residuals = pressure_obs - p_obs_pred
         log_like = -0.5 * np.sum((residuals / noise_std)**2)
         return log_like
-    
+ 
     def log_prior(self, log_k):
         """Calculate log-prior (Gaussian prior)."""
         return -0.5 * np.sum(((log_k - self.prior_mean) / self.prior_std)**2)
-    
+
     def log_posterior(self, log_k, pressure_obs, obs_indices, noise_std=0.01):
         """Calculate log-posterior."""
         return self.log_likelihood(log_k, pressure_obs, obs_indices, noise_std) + self.log_prior(log_k)
-    
+
     def invert(self, pressure_obs, obs_indices, noise_std=0.01, initial_guess=None):
         """
         Invert for log-permeability using MAP estimation.
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     plt.ylabel('log(Permeability)')
     plt.legend()
     plt.grid()
-    
+
     plt.subplot(1, 2, 2)
     plt.plot(x, true_pressure, 'b-', label='True pressure', linewidth=2)
     plt.plot(x, inverted_pressure, 'r--', label='Predicted pressure', linewidth=2)
@@ -122,6 +122,6 @@ if __name__ == "__main__":
     plt.ylabel('Pressure')
     plt.legend()
     plt.grid()
-    
+
     plt.tight_layout()
     plt.show()
