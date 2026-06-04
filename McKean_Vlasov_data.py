@@ -42,8 +42,8 @@ SCALING_FACTOR = N_TOTAL ** ((alpha + 1 + beta) / (2*(alpha+1) + 2*beta + 1) - 1
 
 
 def initial_condition(x, zeta_=None):
-    # Tent function: 1 - |x - 0.5| * 2, centred at 0.5 on [0,1)
-    phi = 1.0 - np.abs(x - 0.5) * 2
+    # Tent function: 4/3(1/2 + |x - 0.5|), centred at 0.5 on [0,1)
+    phi = 4/3 * (0.5 + np.abs(x - 0.5))
     phi = phi - np.min(phi) + 1e-4
     phi /= (np.sum(phi) * dx)
     return phi
