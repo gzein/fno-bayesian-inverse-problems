@@ -11,7 +11,7 @@ preliminary McKean-Vlasov results in Chapter 5.
 ## Repository structure
 
 ```
-Darcy_FNO.ipynb               Main pipeline: train FNO, run pCN MCMC, UQ figures (4.2–4.5)
+Darcy_FNO.ipynb               Main pipeline: train FNO, run pCN MCMC, Uncertainty Quantification figures (4.2–4.5)
 Darcy_Ablation.ipynb          Ablation studies over Fourier modes and observation sparsity (4.7, 4.8)
 McKeanVlasov.ipynb            Preliminary non-linear results (Chapter 5)
 McKeanVlasov_data.ipynb       Generates data for McKean-Vlasov problem
