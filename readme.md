@@ -27,7 +27,7 @@ cd <repo>
 pip install -r requirements.txt
 ```
 
-Tested with Python 3.11 and PyTorch 2.x. Training was run on an NVIDIA RTX 5060
+Tested with Python 3.14 and PyTorch 2.11. Training was run on an NVIDIA RTX 5060
 laptop GPU; a GPU is recommended but the notebooks run on CPU.
 
 ## Data
