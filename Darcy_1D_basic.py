@@ -12,10 +12,10 @@
 # Solutions: data too noisy (sigma too big), not enough datapoints (n_samples too low), burn in period too low (however this typically is not the issue)
 # Can also experiment with a more informed prior
 
-from fdm_solution import solve_darcy_1d_fd, interpolator
+from _helper_FDM_Darcy_1D_basic import solve_darcy_1d_fd, interpolator
 import numpy as np
 import matplotlib.pyplot as plt
-from _plot_helpers import plot_XY
+
 
 # remember to modify this function when you modify the true_theta, g, bc 
 def loglikelihood(theta, X, Y, noise_std=0.01):
